@@ -71,6 +71,9 @@ Ensure the following tools are installed on your system:
 
 - **bash**: The script is written for Bash and should work on any Unix-like system.
 - **xmlstarlet**: A command-line XML processor that is used to parse and extract data from the XML file.
+- **Python**: 3.x
+- **requests**: A library to make HTTP requests.
+- **python-dotenv**: A library to load environment variables from a .env file.
 
 ### Installation of `xmlstarlet`
 
@@ -90,6 +93,10 @@ For **macOS** (using Homebrew):
 brew install xmlstarlet
 ```
 
+```bash
+pip install requests python-dotenv
+```
+
 ## Usage
 
 1. **Place the XML File:**
@@ -104,9 +111,14 @@ brew install xmlstarlet
    ./make_csv.sh
    ```
 
+   ```bash
+   python ./add_category.py
+
+   ```
+
 3. **Check the Output:**
 
-   After running the script, the output CSV file (`output.csv`) will be generated in the same directory.
+   After running the script, the output CSV file (`output.csv`, `output_with_category.csv`) will be generated in the same directory.
 
 ## Script Details
 
