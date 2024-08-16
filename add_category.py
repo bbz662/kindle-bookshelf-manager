@@ -8,14 +8,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# 環境変数を取得する関数
 def get_env_var(var_name, default_value=None, required=False):
     value = os.getenv(var_name, default_value)
     if required and value is None:
         raise ValueError(f"Environment variable {var_name} is missing and is required.")
     return value
 
-# 環境変数と定数
 INPUT_CSV = get_env_var('INPUT_CSV', required=True)
 OUTPUT_CSV = get_env_var('OUTPUT_CSV', required=True)
 GEMINI_MODEL = get_env_var('GEMINI_MODEL', required=True)
